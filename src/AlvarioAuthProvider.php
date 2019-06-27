@@ -10,7 +10,7 @@ use Psr\Http\Message\ResponseInterface;
 
 class AlvarioAuthProvider extends AbstractProvider
 {
-    private $hostUrl = 'https://user-management.alvar.io';
+    public $hostUrl = 'https://user-management.alvar.io';
 
     public function __construct(array $options = [], array $collaborators = [])
     {

@@ -21,6 +21,17 @@ class AlvarioAuthProviderTest extends TestCase
     /** @var AlvarioAuthProvider */
     protected $provider;
 
+    public function testChangeHostUrl()
+    {
+        $provider = new AlvarioAuthProvider(['hostUrl' => 'http://example.com']);
+
+        $this->assertEquals(
+            'http://example.com/oauth/v2/auth',
+            $provider->getBaseAuthorizationUrl()
+        );
+    }
+
+
     public function testGetBaseAuthorizationUrl()
     {
         $this->assertEquals(
