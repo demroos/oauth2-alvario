@@ -86,6 +86,11 @@ class AlvarioUserTest extends TestCase
         $this->assertEquals($this->getRequest()['first_name'], $this->user->getFirstName());
     }
 
+    public function testGetRoles()
+    {
+        $this->assertEquals($this->getRequest()['roles'], $this->user->getRoles());
+    }
+
     protected function setUp()
     {
         $this->user = $this->createUser();

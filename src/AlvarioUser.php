@@ -53,6 +53,11 @@ class AlvarioUser implements ResourceOwnerInterface
         return $this->response['scopes'];
     }
 
+    public function getRoles()
+    {
+        return $this->response['roles'];
+    }
+
     /**
      * Return all of the owner details available as an array.
      *
